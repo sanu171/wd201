@@ -24,7 +24,8 @@ fs.readFile("registration.html", (err, registration) => {
   }
   registrationContent = registration;
 });
-
+const port = process.argv.find(arg => arg.includes('--port='));
+const portNumber = port ? parseInt(port.split('=')[1]) : 3000;
 http
   .createServer((request, response) => {
     let url = request.url;
@@ -51,6 +52,6 @@ http
     }
     
   })
-  .listen(5000);
+  .listen(portNumber);
 
  
