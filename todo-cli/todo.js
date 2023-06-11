@@ -30,7 +30,7 @@ const todoList = () => {
     for (let i = 0; i < list.length; i++) {
       const todo = list[i];
       const status = todo.completed ? 'X' : ' ';
-      output += `[${status}] ${todo.title} - Due: ${todo.dueDate}\n`;
+      output += `[${status}] ${todo.title} ${todo.dueDate}\n`;
     }
     return output;
   }
