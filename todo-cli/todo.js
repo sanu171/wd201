@@ -31,9 +31,9 @@ const todoList = () => {
       const todo = list[i];
       const status = todo.completed ? 'X' : ' '; 
       if(todo.dueDate!=today){
-      output += `[${status}] ${todo.title} ${todo.dueDate}\n`;
+      output += `[${status}] ${todo.title} ${todo.dueDate}`;
       }
-      else{output += `[${status}] ${todo.title}\n`;
+      else{output += `[${status}] ${todo.title}`;
     }
     }
   
