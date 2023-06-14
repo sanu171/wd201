@@ -31,16 +31,16 @@ const todoList = () => {
       const todo = list[i];
       const status = todo.completed ? "x" : " ";
       if (i === list.length - 1) {
-        if (todo.dueDate === today && i === list.length - 1) {
+        if (todo.dueDate === today) {
           output += `[${status}] ${todo.title}`;
         } else {
           output += `[${status}] ${todo.title} ${todo.dueDate}`;
         }
       } else {
-        if (todo.dueDate === today && i === list.length - 1) {
+        if (todo.dueDate === today) {
           output += `[${status}] ${todo.title}\n`;
         } else {
-          output += `[${status}] ${todo.title} \n`;
+          output += `[${status}] ${todo.title} ${todo.dueDate}\n`;
         }
       }
     }
