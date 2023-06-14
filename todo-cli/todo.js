@@ -40,7 +40,7 @@ const todoList = () => {
         if (todo.dueDate === today && i === list.length - 1) {
           output += `[${status}] ${todo.title}\n`;
         } else {
-          output += `[${status}] ${todo.title} ${todo.dueDate}\n`;
+          output += `[${status}] ${todo.title} \n`;
         }
       }
     }
