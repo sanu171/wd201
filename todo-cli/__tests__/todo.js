@@ -21,12 +21,14 @@ describe("Todolist Test Suite", () => {
       dueDate: new Date().toISOString("en-CA"),
     });
     expect(all.length).toBe(todoItemsCount + 1);
+    expect(todoItemsCount).not.toBeNull();
   });
 
   test("Should mark a todo as complete", () => {
     expect(all[0].completed).toBe(false);
     markAsComplete(0);
     expect(all[0].completed).toBe(true);
+    expect(all[0].completed).not.toBeNull();
   });
   test("Checks retrieval of Overdue items", () => {
     expect(overdueItems).not.toBeNull();
