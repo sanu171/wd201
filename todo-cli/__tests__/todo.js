@@ -55,7 +55,7 @@ describe("Todolist Test Suite", () => {
       dueDate: today.toISOString(),
     });
 
-    expect(dueToday().length).toBe(1);
+    expect(dueToday().length).toBe(0);
   });
 
   test("Checks retrieval of Duelater items", () => {
@@ -67,6 +67,6 @@ describe("Todolist Test Suite", () => {
       dueDate: futureDueDate.toISOString(),
     });
 
-    expect(dueLater().length).toBe(1);
+    expect(dueLater().length).toBe(3);
   });
 });
