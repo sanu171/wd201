@@ -44,7 +44,7 @@ describe("Todolist Test Suite", () => {
 
   test("Retrieval of due today items", () => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    today.setDate(today.getDate());
     add({
       title: "Due today todo",
       completed: false,
